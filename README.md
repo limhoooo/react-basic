@@ -16,3 +16,7 @@ lint-staged
 ```
 npm i lint-staged -D
 ```
+쿼리스트링 라이브러리 설치
+```
+npm i query-string
+```

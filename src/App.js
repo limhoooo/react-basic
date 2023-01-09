@@ -1,24 +1,21 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Other from "./pages/Other";
+import Params from "./pages/Params";
+import QueryStr from "./pages/QueryStr";
+import NotFound from "./pages/NotFound";
+import Links from "./components/Links";
 function App() {
-  const rand_0_9 = Math.floor(Math.random() * 10);
   return (
     <BrowserRouter>
-      <Link to="/">home</Link>
-      <div> </div>
-      <Link to={`/about/${rand_0_9}`}>about</Link>
-      <div> </div>
-      <Link to="/other">other</Link>
+      <Links />
       <Routes>
+        <Route path="/params/:id" element={<Params />} />
+        <Route path="/queryStr" element={<QueryStr />} />
         <Route path="/" element={<Home />} />
-        <Route path="/about/:id" element={<About />} />
-        <Route path="/other" element={<Other />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;
