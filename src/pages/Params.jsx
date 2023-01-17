@@ -33,7 +33,7 @@ export default function About() {
     }
     `
     return <div>
-        <GlobalStyle />
+        {/* <GlobalStyle /> */}
         <p>Params</p>
         {id && <p>id는 {id} 입니다.</p>}
         {/* A. 기본 styled-component */}
