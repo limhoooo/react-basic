@@ -8,6 +8,7 @@ const NavLinks = () => {
     const randomNum = Math.floor(Math.random() * 10);
     const querySt = 'name=mark&age=19'
     const NavStyle = styled(NavLink)`
+    color : red;
     &.active {
     color: aqua;
     position: relative;
@@ -33,6 +34,9 @@ const NavLinks = () => {
             </li>
             <li>
                 <NavStyle to={`/queryStr?${querySt}`} >queryStr</NavStyle>
+            </li>
+            <li>
+                <NavStyle to={`/hoc`} >HOC</NavStyle>
             </li>
         </ul>
     );

@@ -29,11 +29,11 @@ export default function About() {
 
     const GlobalStyle = createGlobalStyle`
     button {
-        color : yellow;
+        // color : yellow;
     }
     `
     return <div>
-        {/* <GlobalStyle /> */}
+        <GlobalStyle />
         <p>Params</p>
         {id && <p>id는 {id} 입니다.</p>}
         {/* A. 기본 styled-component */}

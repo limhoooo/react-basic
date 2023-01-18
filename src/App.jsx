@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import NavLinks from "./components/NavLinks";
 import Login from "./pages/Login";
 import { Calendar } from 'antd';
+import HocTest from "./components/HocTest";
 
 function App() {
   const onPanelChange = (value, mode) => {
@@ -15,12 +16,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavLinks />
-      <Calendar onPanelChange={onPanelChange} />
+      {/* <Calendar onPanelChange={onPanelChange} /> */}
 
       <Routes>
         <Route path="/login" element={<Login test="asd" />} />
         <Route path="/params/:id" element={<Params />} />
         <Route path="/queryStr" element={<QueryStr />} />
+        <Route path="/hoc" element={<HocTest />} />
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
