@@ -1,6 +1,6 @@
 import React from 'react';
-import withLoading from "../components/WithLoading";
-import Params from "../pages/Params";
+import withLoading from "./WithLoading";
+import Params from "../../pages/Params";
 
 const HocTest = () => {
     const CompoenetWithLoding = withLoading(Params);

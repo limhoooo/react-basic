@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import StyledButton from "../components/StyledButton";
+import StyledButton from "../components/styled/StyledButton";
 import styled, { createGlobalStyle } from 'styled-components';
-import StyledA from "../components/StyledA";
+import StyledA from "../components/styled/StyledA";
 export default function About() {
     const { id } = useParams();
     // C

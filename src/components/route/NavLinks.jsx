@@ -38,6 +38,12 @@ const NavLinks = () => {
             <li>
                 <NavStyle to={`/hoc`} >HOC</NavStyle>
             </li>
+            <li>
+                <NavStyle to={`/controlledComponent`} >controlledComponent</NavStyle>
+            </li>
+            <li>
+                <NavStyle to={`/hook`} >Hook</NavStyle>
+            </li>
         </ul>
     );
 };
