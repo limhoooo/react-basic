@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-const SetState = () => {
+const UseState = () => {
     const [state, setState] = useState({ count: 0 });
     const countUp = () => {
         setState({ count: state.count + 1 })
     }
     return (
         <div>
-            <p>count : {state.count}</p>
+            <span>count : {state.count}</span>
             <button onClick={countUp}>up!</button>
         </div>
     );
 };
 
-export default SetState;
+export default UseState;
 

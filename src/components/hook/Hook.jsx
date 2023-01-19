@@ -1,5 +1,6 @@
 import React from 'react';
 import UseState from './UseState';
+import UseEffect from './UseEffect';
 const hook = () => {
     return (
         <div>
@@ -7,6 +8,7 @@ const hook = () => {
                 hook
             </h2>
             <UseState />
+            <UseEffect />
         </div>
     );
 };
