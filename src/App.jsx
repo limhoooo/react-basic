@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Calendar } from 'antd';
+// import { Calendar } from 'antd';
 import Home from "./pages/Home";
 import Params from "./pages/Params";
 import QueryStr from "./pages/QueryStr";
@@ -12,25 +12,30 @@ import ParentControlledComponent from './components/controlledComponent/ParentCo
 import Hook from './components/hook/Hook';
 
 function App() {
-  const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
-  };
-  return (
-    <BrowserRouter>
-      <NavLinks />
-      {/* <Calendar onPanelChange={onPanelChange} /> */}
+  // const onPanelChange = (value, mode) => {
+  //   console.log(value.format('YYYY-MM-DD'), mode);
+  // };
 
-      <Routes>
-        <Route path="/login" element={<Login test="asd" />} />
-        <Route path="/params/:id" element={<Params />} />
-        <Route path="/queryStr" element={<QueryStr />} />
-        <Route path="/hoc" element={<HocTest />} />
-        <Route path="/controlledComponent" element={<ParentControlledComponent />} />
-        <Route path="/hook" element={<Hook />} />
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+
+  return (
+    <div className="App">
+
+      <BrowserRouter>
+        <NavLinks />
+        {/* <Calendar onPanelChange={onPanelChange} /> */}
+
+        <Routes>
+          <Route path="/login" element={<Login test="asd" />} />
+          <Route path="/params/:id" element={<Params />} />
+          <Route path="/queryStr" element={<QueryStr />} />
+          <Route path="/hoc" element={<HocTest />} />
+          <Route path="/controlledComponent" element={<ParentControlledComponent />} />
+          <Route path="/hook" element={<Hook />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 export default App;

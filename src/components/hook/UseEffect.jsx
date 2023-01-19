@@ -13,7 +13,7 @@ const UseEffect = () => {
             // componentWillUnmount
             console.log('componentWillUnmount');
         }
-    }, []); // 빈배열 넣을시 최초랜더 에만 실행
+    }, []); // 디펜던시 : 빈배열 넣을시 최초랜더 에만 실행
 
     useEffect(() => {
         console.log('componentDidMount & componentDidUpdate by count', state.count);
