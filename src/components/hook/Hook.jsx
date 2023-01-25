@@ -4,6 +4,7 @@ import UseEffect from './UseEffect';
 import UseWindowWidth from './useWindowWidth';
 import UseReducer from './UseReducer';
 import UseMemo from './UseMemo';
+import UseRef from './UseRef';
 
 const hook = () => {
     const width = UseWindowWidth();
@@ -13,6 +14,7 @@ const hook = () => {
             <h2>
                 hook
             </h2>
+            {width}
             <h1>UseState</h1>
             <UseState />
             <h1>UseEffect</h1>
@@ -21,8 +23,8 @@ const hook = () => {
             <UseReducer />
             <h1>UseMemo</h1>
             <UseMemo />
-            {width}
-
+            <h1>UseRef</h1>
+            <UseRef />
         </div>
     );
 };
