@@ -44,6 +44,12 @@ const NavLinks = () => {
             <li>
                 <NavStyle to={`/hook`} >Hook</NavStyle>
             </li>
+            <li>
+                <NavStyle to={`/communication`} >Communication</NavStyle>
+            </li>
+            <li>
+                <NavStyle to={`/context`} >Context</NavStyle>
+            </li>
         </ul>
     );
 };

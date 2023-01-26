@@ -10,6 +10,10 @@ import Login from "./pages/Login";
 import HocTest from "./components/hoc/HocTest";
 import ParentControlledComponent from './components/controlledComponent/ParentControlledComponent';
 import Hook from './components/hook/Hook';
+import Communication from './components/communication/Communication';
+import Props from "./components/communication/props/Props";
+import Emit from "./components/communication/props/Emit";
+import Context from "./components/context/Context";
 
 function App() {
   // const onPanelChange = (value, mode) => {
@@ -31,6 +35,11 @@ function App() {
           <Route path="/hoc" element={<HocTest />} />
           <Route path="/controlledComponent" element={<ParentControlledComponent />} />
           <Route path="/hook" element={<Hook />} />
+          <Route path="/communication" element={<Communication />}>
+            <Route path="/communication/props" element={<Props />} />
+            <Route path="/communication/emit" element={<Emit />} />
+          </Route>
+          <Route path="/context" element={<Context />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
