@@ -14,12 +14,13 @@ import Communication from './components/communication/Communication';
 import Props from "./components/communication/props/Props";
 import Emit from "./components/communication/props/Emit";
 import Context from "./components/context/Context";
+import Redux from './components/redux/Redux';
 
-function App() {
+
+function App({ store }) {
   // const onPanelChange = (value, mode) => {
   //   console.log(value.format('YYYY-MM-DD'), mode);
   // };
-
 
   return (
     <div className="App">
@@ -40,6 +41,7 @@ function App() {
             <Route path="/communication/emit" element={<Emit />} />
           </Route>
           <Route path="/context" element={<Context />} />
+          <Route path="/redux" element={<Redux />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

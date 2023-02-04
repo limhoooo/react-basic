@@ -50,6 +50,9 @@ const NavLinks = () => {
             <li>
                 <NavStyle to={`/context`} >Context</NavStyle>
             </li>
+            <li>
+                <NavStyle to={`/redux`} >Redux</NavStyle>
+            </li>
         </ul>
     );
 };
