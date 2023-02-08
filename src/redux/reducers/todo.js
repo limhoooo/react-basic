@@ -1,20 +1,15 @@
-import { ADD_TODO, DONE_TODO } from "../actions";
+import { ADD_TODO, CHANGE_DONE } from "../actions";
 
 const init = [];
-export function todosReducer(previousState = init, action) {
-  const index = -1;
-  switch (action.type) {
+export function todoReducers(previousState = init, actions) {
+  switch (actions.type) {
     case ADD_TODO:
-      return [
-        ...previousState,
-        { todo: action.todo, done: false, index: index + 1 },
-      ];
-    case DONE_TODO:
+      return [...previousState, { todo: actions.todo, done: false }];
+    case CHANGE_DONE:
       return previousState.map((todo, index) => {
-        if (index === action.index) return { ...todo, done: !todo.done };
+        if (index === actions.index) return { ...todo, done: !todo.done };
         return todo;
       });
-
     default:
       return previousState;
   }

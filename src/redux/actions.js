@@ -1,5 +1,5 @@
 export const ADD_TODO = "ADD_TODO";
-export const DONE_TODO = "DONE_TODO ";
+export const CHANGE_DONE = "CHANGE_DONE";
 
 export function addTodo(todo) {
   return {
@@ -7,10 +7,9 @@ export function addTodo(todo) {
     todo,
   };
 }
-
-export function doneTodo(index) {
+export function changeTodoDone(index) {
   return {
-    type: DONE_TODO,
+    type: CHANGE_DONE,
     index,
   };
 }

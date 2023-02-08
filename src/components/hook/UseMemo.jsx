@@ -18,7 +18,7 @@ const UseMemo = () => {
 
     const click = useCallback(() => {
         console.log(value);
-    }, [])
+    }, [value])
 
     const change = e => {
         setValue(e.target.value)
