@@ -9,7 +9,6 @@ export default function useReduxState() {
   useEffect(() => {
     const unsubscribe = store.subscribe(() => {
       setState(store.getState());
-      console.log(store.getState());
     });
     return () => {
       unsubscribe();
