@@ -14,7 +14,7 @@ import Communication from './components/communication/Communication';
 import Props from "./components/communication/props/Props";
 import Emit from "./components/communication/props/Emit";
 import Context from "./components/context/Context";
-import Redux from './components/redux/Redux';
+import ReduxContainer from './components/redux/ReduxContainer';
 
 
 function App({ store }) {
@@ -41,7 +41,7 @@ function App({ store }) {
             <Route path="/communication/emit" element={<Emit />} />
           </Route>
           <Route path="/context" element={<Context />} />
-          <Route path="/redux" element={<Redux />} />
+          <Route path="/redux" element={<ReduxContainer />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

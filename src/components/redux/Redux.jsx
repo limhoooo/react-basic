@@ -1,8 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { connect } from 'react-redux';
 
-import { addTodo, changeTodoDone } from '../../redux/actions';
 
 const Redux = ({ todos, addTodo, changeDone }) => {
     const [todoText, setTodoText] = useState('');
@@ -36,24 +34,5 @@ const Redux = ({ todos, addTodo, changeDone }) => {
         </div>
     );
 };
-const mapStateToProps = (state) => {
-    return {
-        todos: state.todos
-    }
-}
-const mapDispatchToProps = dispatch => {
-    return {
-        addTodo: (text) => {
-            dispatch(addTodo(text))
-        },
-        changeDone: (index) => {
-            dispatch(changeTodoDone(index))
-        }
-    }
-}
-const TodoListContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Redux)
 
-export default TodoListContainer;
+export default Redux;
