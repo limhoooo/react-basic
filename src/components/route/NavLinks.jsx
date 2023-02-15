@@ -15,8 +15,15 @@ const NavLinks = () => {
     top: 2px;
   }
     `
+    const UlStyle = styled.ul`
+    margin : 0;
+    margin-right : 50px;
+    padding : 30px;
+    border : 1px solid #aaa;
+  }
+    `
     return (
-        <ul>
+        <UlStyle >
             {/* <li>
                 <NavLink to="/" style={({ isActive }) => ({ color: activeFnc(isActive) })}>home</NavLink>
             </li>
@@ -53,7 +60,7 @@ const NavLinks = () => {
             <li>
                 <NavStyle to={`/redux`} >Redux</NavStyle>
             </li>
-        </ul>
+        </UlStyle>
     );
 };
 

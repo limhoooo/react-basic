@@ -23,7 +23,7 @@ function App({ store }) {
   // };
 
   return (
-    <div className="App">
+    <div className="App" style={{ display: 'flex', height: '100%' }}>
 
       <BrowserRouter>
         <NavLinks />
@@ -46,7 +46,7 @@ function App({ store }) {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 export default App;
