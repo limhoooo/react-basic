@@ -31,7 +31,10 @@ import Redux from './Redux';
 
 function TodoListContainer() {
 
-    const todos = useSelector((state) => state.todos);
+    const { todos, testText } = useSelector((state) => ({
+        todos: state.todos,
+        testText: state.testText
+    }));
     const dispatch = useDispatch()
 
     const addTodoDispatch = useCallback((text) => {
@@ -42,7 +45,7 @@ function TodoListContainer() {
         dispatch(changeTodoDone(index))
     }, [dispatch])
 
-    return <Redux todos={todos} addTodo={addTodoDispatch} changeDone={changeDoneDispatch} />
+    return <Redux todos={todos} testText={testText} addTodo={addTodoDispatch} changeDone={changeDoneDispatch} />
 }
 
 export default TodoListContainer;

@@ -2,9 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 
 
-const Redux = ({ todos, addTodo, changeDone }) => {
+const Redux = ({ todos, testText, addTodo, changeDone }) => {
     const [todoText, setTodoText] = useState('');
     const addTodoFnc = () => {
+        console.log(testText);
         if (!todoText || checkTodoDuplication()) return;
         addTodo(todoText);
         setTodoText('');
