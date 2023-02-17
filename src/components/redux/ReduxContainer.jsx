@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 
 import { addTodo, changeTodoDone } from '../../redux/actions';
 import Redux from './Redux';
@@ -34,7 +34,9 @@ function TodoListContainer() {
     const { todos, testText } = useSelector((state) => ({
         todos: state.todos,
         testText: state.testText
-    }));
+    }),
+        shallowEqual
+    );
     const dispatch = useDispatch()
 
     const addTodoDispatch = useCallback((text) => {
