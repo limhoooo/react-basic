@@ -30,7 +30,6 @@ import Redux from './Redux';
 // 2 .hook 방식
 
 function TodoListContainer() {
-
     const { todos, testText } = useSelector((state) => ({
         todos: state.todos,
         testText: state.testText
