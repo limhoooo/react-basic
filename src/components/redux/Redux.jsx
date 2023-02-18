@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import UserListContainer from './UserListContainer';
 
 
 const Redux = ({ todos, testText, addTodo, changeDone }) => {
@@ -32,6 +33,7 @@ const Redux = ({ todos, testText, addTodo, changeDone }) => {
                     </div>
                 )}
             </div>
+            <UserListContainer />
         </div>
     );
 };
