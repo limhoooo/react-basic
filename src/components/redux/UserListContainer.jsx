@@ -13,14 +13,17 @@ const UserListContainer = () => {
             dispatch(getUsersStart());
             const res = await axios.get('https://api.github.com/users');
             dispatch(getUsersSuccess(res.data));
-
         } catch (error) {
             dispatch(getUsersFail(error));
             console.error(error)
         }
     }, [dispatch])
 
-    return <UserList users={users} getUsers={getUsers} />
+    const deleteUsers = () => {
+        dispatch(getUsersSuccess([]));
+    }
+
+    return <UserList users={users} deleteUsers={deleteUsers} getUsers={getUsers} />
 };
 
 export default UserListContainer;
