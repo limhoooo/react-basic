@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import { todoReducers } from "./todo";
+import todos from "./todos";
 import users from "./users";
 
 const reducers = combineReducers({
-  todos: todoReducers,
+  todos,
   users,
   testText: () => "testText",
 });

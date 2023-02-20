@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-
-import { addTodo, changeTodoDone } from '../../redux/actions';
+import { addTodo, changeTodoDone } from '../../redux/modules/todos';
 import Redux from './Redux';
 
 // 1. HOC 방식
@@ -28,7 +27,6 @@ import Redux from './Redux';
 // )(Redux);
 
 // 2 .hook 방식
-
 function TodoListContainer() {
     const { todos, testText } = useSelector((state) => ({
         todos: state.todos,
