@@ -20,8 +20,7 @@ const NavLinks = () => {
     margin-right : 50px;
     padding : 30px;
     border : 1px solid #aaa;
-  }
-    `
+  `
     return (
         <UlStyle >
             {/* <li>
@@ -35,6 +34,9 @@ const NavLinks = () => {
             </li> */}
             <li>
                 <NavStyle to="/" >home</NavStyle>
+            </li>
+            <li>
+                <NavStyle to="/login" >login</NavStyle>
             </li>
             <li>
                 <NavStyle to={`/params/${randomNum}`} >params</NavStyle>
