@@ -22,14 +22,16 @@ function App({ store }) {
   // const onPanelChange = (value, mode) => {
   //   console.log(value.format('YYYY-MM-DD'), mode);
   // };
+
+
   const Hook = React.lazy(() => import('./components/hook/Hook'))
+
+
   return (
     <div className="App" style={{ display: 'flex', height: '100%' }}>
 
       <BrowserRouter>
         <NavLinks />
-        {/* <Calendar onPanelChange={onPanelChange} /> */}
-
         <Routes>
           <Route path="/login" element={<Login test="asd" />} />
           <Route path="/params/:id" element={<Params />} />
@@ -37,7 +39,8 @@ function App({ store }) {
           <Route path="/hoc" element={<HocTest />} />
           <Route path="/controlledComponent" element={<ParentControlledComponent />} />
 
-          <Route path="/hook" element={<React.Suspense fallback={<>loding...</>}>
+          <Route path="/hook" element={
+          <React.Suspense fallback={<>loding...</>}>
             <Hook />
           </React.Suspense>} />
 
